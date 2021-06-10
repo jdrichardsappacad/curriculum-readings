@@ -40,7 +40,7 @@ think of the page as pieces of UI working in harmony with one another. When you
 make a list or a button or a product card, you can then reuse those components
 to show different data that your UI demands to show.
 
-## One-flow of data
+## One way data flow
 
 React applications are built as a combination of parent and child components. As
 the names suggest, each child component has a parent and a parent component will
@@ -56,16 +56,17 @@ where the data display or event handling code is.
 You may have come to the conclusion that writing things like
 
 ```js
-el.innerHTML = `
+el.innerHTML =
+  `
   <table>
     <tbody>` +
-      arr.map(item => `<tr><td>${item.name}</td></tr>`)
-    + `</tbody>
+  arr.map((item) => `<tr><td>${item.name}</td></tr>`) +
+  `</tbody>
   </table>
 `;
 ```
 
-is hard to debug, maintain, and use in the long run.  React solves this problem
+is hard to debug, maintain, and use in the long run. React solves this problem
 by providing a **virtual DOM** (in memory) that acts as an agent between the
 developer and the real DOM. The **virtual DOM** is a lot more user-friendly for
 developers.
@@ -86,11 +87,11 @@ of days. Happy Reacting!
 You found out that React has a variety of good points that encourage you to
 choose it as the means to build your front-end:
 
-* React encourages modular development
-* React is easy to use, easy to start with, and has some great tools
-* React follows the declarative programming style
-* React encourages reusability in your code
-* React has one way that data flows which makes it much easier to reason about
+- React encourages modular development
+- React is easy to use, easy to start with, and has some great tools
+- React follows the declarative programming style
+- React encourages reusability in your code
+- React has one way that data flows which makes it much easier to reason about
   the code
-* React uses a "virtual DOM" to make changes to the real DOM very fast and
+- React uses a "virtual DOM" to make changes to the real DOM very fast and
   efficient
